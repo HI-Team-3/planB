@@ -1,9 +1,5 @@
 // API KEY: fptljKSZwqx1cVFvU9lcEk0yQxxXC3UU
 
-const index = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-
-const random = Math.floor(Math.random() * index.length);
-
 //This is a general API template that you can use with many of the API's you will find on the web.
 
 //create variable that store button in javascript variable
