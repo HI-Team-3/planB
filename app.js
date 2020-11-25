@@ -4,6 +4,9 @@
 
 //create variable that store button in javascript variable
 let button = document.querySelector("#getData");
+var giphyApiKey = "fptljKSZwqx1cVFvU9lcEk0yQxxXC3UU";
+//var giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&api_key=${giphyApiKey}`;
+//var giphyRandomURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyApiKey}=&rating=g`;
 
 //add an event listener to the button. Run the function sendApiRequest when the button is clicked
 button.addEventListener("click", () => {
