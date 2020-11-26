@@ -4,6 +4,8 @@ var gifBoxes = document.querySelector("#wrapper");
 var soundApiKey = `iUEo8G4SpNyoDuuhogZQMnnNDuHTyco8Ia1pcRXC`;
 var giphyApiKey = "fptljKSZwqx1cVFvU9lcEk0yQxxXC3UU";
 var giphyRandomURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyApiKey}&tag=random&rating=r`;
+var soundURL = `https://freesound.org/apiv2/users/LimitSnap_Creations/sounds/?query=piano&token=${soundApiKey}`; //not working
+console.log(soundURL);
 window.onload = function () {
   //add an event listener to the button. Run the function sendApiRequest when the button is clicked
   button.addEventListener("click", () => {
