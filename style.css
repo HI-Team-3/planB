@@ -1,13 +1,20 @@
 body {
-  background: black;
+  background: rgb(0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
-
 #wrapper {
-  padding: 2rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  resize: none;
+  overflow: hidden;
 }
-
-img {
+.bubble {
   width: 250px;
   height: 250px;
-  border-radius: 250px;
+  border-radius: 25px;
+}
+button {
 }
