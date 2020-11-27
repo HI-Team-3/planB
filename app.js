@@ -11,7 +11,7 @@ window.onload = function () {
     soundManager.setup({
       // where to find the SWF files, if needed
       onready: function () {
-        // SM2 has loaded, API ready to use e.g., createSound() etc.
+        // SM2 has loaded, API ready to use createSound();
         var channelChange = soundManager.createSound({
           url: "https://freesound.org/data/previews/279/279004_5340548-hq.mp3",
         });
