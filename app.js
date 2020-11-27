@@ -22,7 +22,6 @@ window.onload = function () {
         // Uh-oh. No HTML5 support, SWF missing, Flash blocked or other issue
       },
     });
-
     sendApiRequest();
     sendSoundApiRequest();
   });
