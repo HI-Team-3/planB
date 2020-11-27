@@ -24,7 +24,6 @@ window.onload = function () {
       },
     });
     sendApiRequest();
-    sendSoundApiRequest();
   });
   //fetch data from the API
   async function sendApiRequest() {
@@ -45,8 +44,5 @@ window.onload = function () {
       translateZ: "550",
       scale: 1.2,
     });
-  }
-  function useSoundApiData(sounds) {
-    console.log(sounds);
   }
 };
