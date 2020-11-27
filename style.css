@@ -1,18 +1,33 @@
 body {
-  background: #000000;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-}
-#wrapper {
   display: grid;
   place-items: center;
   height: 95vh;
   resize: none;
   overflow: hidden;
+  background-color: black;
+  z-index: 0;
+}
+canvas {
+  top: 0;
+  margin-left: 0;
+  bottom: 0;
+  right: 0;
+}
+#wrapper {
+  margin-top: -35.5rem;
+  margin-right: 11.41rem;
+}
+.tvImg {
+  width: 828px;
+  height: 800px;
+  z-index: 10;
 }
 .bubble {
-  width: 250px;
-  height: 250px;
-  border-radius: 25px;
+  width: 416px;
+  height: 322px;
+  position: relative;
+  z-index: 9;
 }
