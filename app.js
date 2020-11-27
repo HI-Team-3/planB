@@ -31,11 +31,6 @@ window.onload = function () {
     let gifs = await response.json();
     useApiData(gifs);
   }
-  async function sendSoundApiRequest() {
-    let response = await fetch(soundURL);
-    let sounds = await response.json();
-    useSoundApiData(sounds);
-  }
   //do something with the API data you've received.
   function useApiData(gifs) {
     gifBox.innerHTML = `<img class="bubble" src = "${gifs.data.images.original.url}">`;
