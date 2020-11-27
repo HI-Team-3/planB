@@ -30,7 +30,7 @@ window.onload = function () {
   async function sendSoundApiRequest() {
     let response = await fetch(soundURL);
     let sounds = await response.json();
-    useSoundApiData(sounds)
+    useSoundApiData(sounds);
   }
   //do something with the API data you've received.
   function useApiData(gifs) {
@@ -43,9 +43,7 @@ window.onload = function () {
     });
   }
   function useSoundApiData(sounds) {
-    var mySound = soundManager.createSound({
-      url: 
-     });
-     mySound.play();//not working
+    soundManager.play(sounds.data);
+    console.log(sounds);
   }
 };
