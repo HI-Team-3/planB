@@ -3,7 +3,7 @@ let button = document.querySelector("#getData");
 var gifBox = document.querySelector("#wrapper");
 var soundApiKey = `iUEo8G4SpNyoDuuhogZQMnnNDuHTyco8Ia1pcRXC`;
 var giphyApiKey = "fptljKSZwqx1cVFvU9lcEk0yQxxXC3UU";
-var giphyRandomURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyApiKey}&tag=funny&rating=r`;
+var giphyRandomURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyApiKey}&tag=random&rating=r`;
 var soundURL = `https://freesound.org/apiv2/sounds/279004/?token=${soundApiKey}`;
 window.onload = function () {
   soundManager.setup({
@@ -38,8 +38,9 @@ window.onload = function () {
     anime({
       targets: ".bubble",
       scale: 2.5,
+      skew: 360,
       rotate: "3turn",
-      easing: "spring(1, 80, 100, 0)",
+      easing: "spring(1, 8, 90, 4)",
     });
   }
   function useSoundApiData(sounds) {
