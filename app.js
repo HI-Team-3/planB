@@ -10,7 +10,6 @@ window.onload = function () {
   button.addEventListener("click", () => {
     soundManager.setup({
       // where to find the SWF files, if needed
-      url: `https://freesound.org/data/previews/279/279004_5340548-hq.mp3"`,
       onready: function () {
         // SM2 has loaded, API ready to use e.g., createSound() etc.
         var channelChange = soundManager.createSound({
