@@ -15,7 +15,9 @@ window.onload = function () {
         var channelChange = soundManager.createSound({
           url: "https://freesound.org/data/previews/279/279004_5340548-hq.mp3",
         });
-        channelChange.play();
+        channelChange.play({
+          volume: 13,
+        });
       },
       ontimeout: function () {
         // Uh-oh. No HTML5 support, SWF missing, Flash blocked or other issue
