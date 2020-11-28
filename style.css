@@ -1,23 +1,28 @@
-body,
-html {
-  height: 100%;
+body {
+  overflow: hidden;
 }
 .background {
+  display: grid;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 58em;
+  margin: auto;
+  z-index: 5;
+  overflow: none;
+
   background-image: url(img/ricknmorty.png);
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  overflow: none;
-  z-index: 5;
 }
 #wrapper {
   position: relative;
   padding-top: 17em;
-  padding-left: 39em;
+  padding-left: 1em;
   z-index: -5;
 }
 .bubble {
-  width: 416px;
-  height: 232px;
+  width: 30em;
+  height: 20em;
 }
