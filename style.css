@@ -1,33 +1,23 @@
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  height: 95vh;
-  resize: none;
-  overflow: hidden;
-  background-color: black;
-  z-index: 0;
+body,
+html {
+  height: 100%;
 }
-canvas {
-  top: 0;
-  margin-left: 0;
-  bottom: 0;
-  right: 0;
+.background {
+  background-image: url(img/ricknmorty.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  overflow: none;
+  z-index: 5;
 }
 #wrapper {
-  margin-top: -35.5rem;
-  margin-right: 11.41rem;
-}
-.tvImg {
-  width: 828px;
-  height: 800px;
-  z-index: 10;
+  position: relative;
+  padding-top: 17em;
+  padding-left: 39em;
+  z-index: -5;
 }
 .bubble {
   width: 416px;
-  height: 322px;
-  position: relative;
-  z-index: 9;
+  height: 232px;
 }
