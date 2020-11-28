@@ -3,7 +3,13 @@ body {
 }
 .background {
   display: grid;
-  justify-content: center;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i";
 
   width: 100%;
   min-height: 58em;
@@ -13,16 +19,17 @@ body {
 
   background-image: url(img/ricknmorty.png);
   background-size: 100%;
-  background-position: center;
+
   background-repeat: no-repeat;
 }
 #wrapper {
-  position: relative;
-  padding-top: 17em;
-  padding-left: 1em;
+  grid-area: d;
+  margin-top: 2em;
+  margin-left: 1em;
   z-index: -5;
 }
 .bubble {
   width: 30em;
-  height: 20em;
+  height: 18em;
+  position: inherit;
 }
