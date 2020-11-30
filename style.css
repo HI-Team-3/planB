@@ -20,13 +20,13 @@ html {
   z-index: 10;
 }
 #wrapper {
-  position: absolute;
+  position: fixed;
   top: 44.75%;
   left: 50.2%;
   transform: translate(-50%, -50%);
   z-index: -10;
 }
 .bubble {
-  height: 13.8rem;
-  width: 24.9rem;
+  height: 16.6rem;
+  width: 28.8rem;
 }
