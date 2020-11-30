@@ -1,0 +1,41 @@
+.temperature {
+    grid-column: 9 / span 1;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    font-size: 50px;
+    font-weight: 700;
+    color: blueviolet;
+}
+
+.temperature-degree {
+    grid-column: 1 / span 1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    grid-column: 2 / span 1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2em;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 50px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/advice-api/advice.css" />
+    <link rel="stylesheet" href="weather/wapi.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/soundmanager2/V2.97a.20170601/script/soundmanager2-nodebug-jsmin.js" integrity="sha512-uB1r5JCe4U/8m6YXuTKq0rDyqWvjKH0uFvoBAfdloNCVPQnM48qGrW2O7Q+lv6zHrq5QuEi9kyim/zmN3qIv8A==" crossorigin="anonymous"></script>
+    <title>planG</title>
+</head>
+
+<body>
+
+    <div class="background">
+        <div id="getAdviceData"></div>
+        <div id="wrapper"></div>
+
+        <div class="temperature">
+            <h1 class="temperature-degree"></h1>
+            <span> °C</span>
+        </div>
+        <section class="joke-container">
+            <div id="jokeWrapper"></div>
+        </section>
+        <section class="remote-controller">
+            <button id="jokeBtn"></button>
+            <button id="getData"></button>
+        </section>
+        <div class="btn-wrapper"></div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="/advice-api/advice.js"></script>
+
+</html>

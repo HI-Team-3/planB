@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+html {
+    background-color: black;
+    overflow: hidden;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/ricknmorty.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#wrapper {
+    grid-column: 4 / span 3;
+    grid-row: 2;
+    position: absolute;
+    top: 44.75%;
+    left: 50.2%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+
+.joke-container {
+    grid-column: 8 / span 1;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr;
+}
+
+#jokeWrapper {
+    grid-row: 2;
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(255, 255, 254);
+    font-size: 1.3em;
+}
+
+.remote-controller {
+    grid-column: 5 / span 1;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 4.3em;
+    margin-bottom: 1em;
+    gap: 0.4em;
+}
+
+#getData,
+#jokeBtn {
+    grid-column: 2 / span 1;
+    grid-row: 3;
+    height: 10px;
+    width: 10px;
+    border-radius: 1em;
+}
+
+#jokeBtn {
+    background-color: red;
+}
+
+#getData {
+    background-color: green;
+}
+
+.bubble {
+    height: 16.6rem;
+    width: 28.8rem;
+}
