@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  c
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/advice-api/advice.css" />
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
@@ -16,11 +19,14 @@
     ></script>
     <title>planG</title>
   </head>
+
   <body>
     <div id="wrapper"></div>
     <div class="background">
-      <button id="getData">Feeling Lucky?</button>
+      <div id="getAdviceData"></div>
+      <button id="getData"></button>
     </div>
   </body>
   <script src="app.js"></script>
+  <script src="/advice-api/advice.js"></script>
 </html>
