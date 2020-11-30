@@ -22,11 +22,11 @@ html {
 #wrapper {
   position: absolute;
   top: 44%;
-  left: 50%;
+  left: 50.2%;
   transform: translate(-50%, -50%);
   z-index: -10;
 }
 .bubble {
   height: 27vh;
-  width: 40vw;
+  width: 24vw;
 }
