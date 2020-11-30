@@ -27,6 +27,6 @@ html {
   z-index: -10;
 }
 .bubble {
-  width: 40vw;
   height: 26vh;
+  width: 40vw;
 }
