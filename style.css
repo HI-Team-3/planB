@@ -21,12 +21,12 @@ html {
 }
 #wrapper {
   position: absolute;
-  top: 44%;
+  top: 44.75%;
   left: 50.2%;
   transform: translate(-50%, -50%);
   z-index: -10;
 }
 .bubble {
-  height: 27vh;
-  width: 24vw;
+  height: 13.8rem;
+  width: 24.9rem;
 }
