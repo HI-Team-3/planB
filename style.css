@@ -5,27 +5,44 @@
   font-family: inherit;
 }
 
-html {
+body {
   background-color: black;
   overflow: hidden;
 }
 
-.background {
+.outerGrid {
+  display: grid;
   width: 100vw;
   height: 100vh;
+  grid-template-areas:
+    "a b c d e"
+    "f g h i j"
+    "k l m n o";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.background {
+  grid-row: a / span 3;
+  grid-column: a / span 5;
   background-image: url(img/ricknmorty.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
-  z-index: 10;
+  background-attachment: inherit;
+
+  display: grid;
+  grid-template-areas:
+    "a b c d e"
+    "f g h i j"
+    "k l m n o";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  z-index: -1;
 }
 
 #wrapper {
-  position: absolute;
-  top: 44.75%;
-  left: 50.2%;
-  transform: translate(-50%, -50%);
+  grid-area: h;
   z-index: -10;
 }
 
@@ -35,20 +52,77 @@ html {
 }
 
 button {
-  height: 4em;
-  width: 1em;
-  border-radius: 1em;
-  grid-column: 5 / span 1;
-  grid-row: 5;
-  height: 5px;
+  grid-area: a;
+  background-color: #3b3b3b;
+  border: none;
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
 }
 
+/*joke api*/
 #jokeWrapper {
-  position: absolute;
-  top: 44%;
-  left: 50%;
-  width: 20em;
-  transform: translate(-50%, -50%);
+  max-width: 18em;
   z-index: 12;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+#jokeWrapper:after {
+  content: "";
+
+  color: transparent;
+  border: 20px solid;
+  top: 100%;
+  border-top: 23.3px solid #ffffff;
+}
+
+/*advice api*/
+@font-face {
+  src: url(/fonts/SimpleStitch-8W2g.ttf);
+  font-family: stitch;
+}
+
+.stitch-board {
+  grid-area: c;
+  z-index: 11;
+}
+
+.advice {
+  grid-area: c;
+  font-family: stitch;
+  font-weight: 400;
+  font-size: 0.8em;
+  color: #b62a00;
+  z-index: 1;
+}
+
+.cross-stitch {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 2px solid;
+  box-shadow: 0 0 0 5px rgb(255, 183, 0), 0 0 0 7px #000,
+    0 1px 20px 0 rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+  background-image: radial-gradient(circle, #ccc 15%, transparent 15%);
+  background-repeat: repeat;
+  background-size: 0.5rem 0.5rem;
+  background-position: -0.5px -0.5px;
+  z-index: 5;
+}
+
+/*weather api*/
+.temperature {
+}
+h1 {
+  font-size: 80px;
+  color: blueviolet;
+  font-weight: 700;
+}
+span {
+  font-size: 80px;
+  color: blueviolet;
+  margin-left: 20px;
 }

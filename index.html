@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/advice-api/advice.css" />
-    <link rel="stylesheet" href="weather/wapi.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
@@ -20,19 +18,21 @@
   </head>
 
   <body>
-    <div id="wrapper"></div>
-    <div class="background">
-      <div id="getAdviceData"></div>
-      <button id="getData"></button>
-      <div class="btn-wrapper"></div>
-      <div class="temperature">
-        <h1 class="temperature-degree"></h1>
-        <span> °C</span>
+    <div class="outerGrid">
+      <button id="getData">G</button>
+      <div class="background">
+        <div id="getAdviceData"></div>
 
-        <div id="jokeWrapper"></div>
-
-        <button id="jokeBtn">joke</button>
+        <div class="joke">
+          <div id="jokeWrapper"></div>
+          <button id="jokeBtn">J</button>
+        </div>
+        <div class="temperature">
+          <h1 class="temperature-degree"></h1>
+          <span>°C</span>
+        </div>
       </div>
+      <div id="wrapper"></div>
     </div>
   </body>
   <script src="app.js"></script>
