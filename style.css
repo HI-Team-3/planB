@@ -42,3 +42,13 @@ button {
   grid-row: 5;
   height: 5px;
 }
+
+#jokeWrapper {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  width: 20em;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  color: rgb(255, 255, 255);
+}
