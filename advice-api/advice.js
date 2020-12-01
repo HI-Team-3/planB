@@ -1,4 +1,16 @@
-function fetchAdvice() {
+let norrisWrapper = document.querySelector("#wrapper2");
+let norrisBtn = document.querySelector('#norris-button');
+
+norrisBtn.addEventListener("click", fetchAdvice);
+
+async function fetchAdvice() {
+    let norrisResponse = await fetch("https://api.chucknorris.io/jokes/random");
+    let norrisData = await norrisResponse.json();
+    norrisWrapper.innerHTML = norrisData.value;
+}
+
+
+/* function fetchAdvice() {
     fetch('https://api.adviceslip.com/advice')
         .then(response => {
             if (!response.ok) {
@@ -22,4 +34,4 @@ function fetchAdvice() {
         .catch(err => console.log(err));
 }
 
-fetchAdvice();
+fetchAdvice(); */
