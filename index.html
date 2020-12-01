@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
@@ -18,21 +22,24 @@
   </head>
 
   <body>
-    <div class="outerGrid">
-      <button id="getData">G</button>
-      <div class="background">
-        <div id="getAdviceData"></div>
-
-        <div class="joke">
-          <div id="jokeWrapper"></div>
-          <button id="jokeBtn">J</button>
-        </div>
-        <div class="temperature">
-          <h1 class="temperature-degree"></h1>
-          <span>°C</span>
+    <div class="containerGrid">
+      <div id="wrapper"></div>
+      <button class="gifButton" id="getData"></button>
+      <div class="btn-wrapper"></div>
+      <div class="temperature">
+        <div class="temperature-degree"></div>
+        <div class="flux">STO</div>
+      </div>
+      <div id="adviceBtn">
+        <div id="getAdviceData">- Morty: <br />Try using an old idea.</div>
+      </div>
+      <div id="jokeBtn">
+        <div id="jokeWrapper">
+          - Rick: <br />I needed a password eight characters long so I picked
+          Snow White and the Seven Dwarfs.
         </div>
       </div>
-      <div id="wrapper"></div>
+      <div class="background"></div>
     </div>
   </body>
   <script src="app.js"></script>

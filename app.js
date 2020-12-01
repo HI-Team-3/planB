@@ -25,7 +25,7 @@ window.onload = function () {
       },
     });
     var jokeText = await jokeData.json();
-    jokeBox.innerHTML = jokeText.joke;
+    jokeBox.innerHTML = `- Rick: <br> <div>${jokeText.joke} </div>`;
   }
 
   sendWeatherApiRequest();
@@ -74,7 +74,7 @@ window.onload = function () {
       .then((data) => {
         console.log(data);
         const { temp } = data.main;
-        temperatureDegree.textContent = Math.round(temp - 273.15);
+        temperatureDegree.textContent = Math.round(temp - 273.15) + "°C";
       });
   }
 
