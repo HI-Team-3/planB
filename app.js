@@ -136,14 +136,14 @@ function useApiData(gifs) {
 
 anime({
   targets: ".line",
-  translateY: -25,
-  height: "90%", // -> from '28px' to '100%',
-
-  direction: "alternate",
+  translateY: [80, 25],
+  height: "100%",
   loop: true,
+  direction: "alternate",
+  easing: "linear",
 });
 
 anime({
   targets: ".gifButton",
-  skew: "-17",
+  skew: "-15",
 });
