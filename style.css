@@ -54,12 +54,13 @@ body {
 }
 
 button {
-  background-color: #535353;
+  background-color: #858080;
   border: none;
   height: 2em;
   width: 2em;
   border-radius: 100%;
-  border: 1.5px solid black;
+  border: 2px solid rgb(46, 46, 46);
+  outline: none;
 }
 
 .gifButton {
