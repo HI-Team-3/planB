@@ -1,23 +1,11 @@
-let advice = document.querySelector("#adviceBtn");
-let adviceText = document.querySelector("#getAdviceData");
+let norrisWrapper = document.querySelector("#getAdviceData");
+let norrisBtn = document.querySelector("#adviceBtn");
 
-function fetchAdvice() {
-  advice.addEventListener("click", displayJoke);
-  function displayJoke() {
-    fetch("https://api.adviceslip.com/advice")
-      .then((response) => {
-        if (!response.ok) {
-          throw Error("Promise rejected");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data.slip);
+norrisBtn.addEventListener("click", fetchAdvice);
 
-        adviceText.innerHTML = `- Morty: <br> <div class="advice">${data.slip.advice} </div>`;
-      })
-      .catch((err) => console.log(err));
-  }
+async function fetchAdvice() {
+  let norrisResponse = await fetch("https://api.chucknorris.io/jokes/random");
+  let norrisData = await norrisResponse.json();
+
+  norrisWrapper.innerHTML = `- Morty: <br> <div>${norrisData.value} </div>`;
 }
-
-fetchAdvice();
