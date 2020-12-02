@@ -133,3 +133,17 @@ function useApiData(gifs) {
     scale: 1.2,
   });
 }
+
+anime({
+  targets: ".line",
+  translateY: -25,
+  height: "90%", // -> from '28px' to '100%',
+
+  direction: "alternate",
+  loop: true,
+});
+
+anime({
+  targets: ".gifButton",
+  skew: "-17",
+});
