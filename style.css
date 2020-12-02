@@ -150,10 +150,8 @@ button {
 .temperature {
     align-self: center;
     justify-self: center;
-    grid-column: 1;
-    grid-row: 8;
-    height: 40px;
-    width: 83px;
+    grid-column: 2;
+    grid-row: 9;
 }
 
 .temperature-degree {
