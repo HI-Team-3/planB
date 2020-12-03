@@ -5,10 +5,8 @@ let temperatureDegree = document.querySelector(".temperature-degree");
 const weatherApikey = "87c18c31ffa6fe9c3b68cb4d2bd50b14";
 const proxy = `https://cors-anywhere.herokuapp.com/`;
 const api = `${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApikey}`;
-
 let buttonJoke = document.querySelector("#jokeBtn");
 let jokeBox = document.querySelector("#jokeWrapper");
-
 let button = document.querySelector("#getData");
 var gifBox = document.querySelector("#wrapper");
 var soundApiKey = `iUEo8G4SpNyoDuuhogZQMnnNDuHTyco8Ia1pcRXC`;
@@ -17,7 +15,6 @@ var giphyRandomURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyApiKey
 var soundURL = `https://freesound.org/apiv2/sounds/279004/?token=${soundApiKey}`;
 window.onload = function () {
   buttonJoke.addEventListener("click", getJoke);
-
   async function getJoke() {
     var jokeData = await fetch("https://icanhazdadjoke.com/", {
       headers: {
@@ -27,7 +24,6 @@ window.onload = function () {
     var jokeText = await jokeData.json();
     jokeBox.innerHTML = `- Rick: <br> <div>${jokeText.joke} </div>`;
   }
-
   sendWeatherApiRequest();
   //add an event listener to the button. Run the function sendApiRequest when the button is clicked
   button.addEventListener("click", () => {
@@ -53,7 +49,6 @@ window.onload = function () {
     let response = await fetch(giphyRandomURL);
     let gifs = await response.json();
     useApiData(gifs);
-
     //do something with the API data you've received.
     function useApiData(gifs) {
       gifBox.innerHTML = `<img class="bubble" src = "${gifs.data.images.original.url}">`;
@@ -64,20 +59,17 @@ window.onload = function () {
       });
     }
   }
-
   async function sendWeatherApiRequest() {
     fetch(api)
       .then((weatherResponse) => {
         return weatherResponse.json();
       })
-
       .then((data) => {
         console.log(data);
         const { temp } = data.main;
         temperatureDegree.textContent = Math.round(temp - 273.15) + "°C";
       });
   }
-
   //do something with the API data you've received.
   function useApiData(gifs) {
     gifBox.innerHTML = `<img class="bubble" src = "${gifs.data.images.original.url}">`;
@@ -97,7 +89,6 @@ function useApiData(gifs) {
     scale: 1.2,
   });
 }
-
 //do something with the API data you've received.
 function useApiData(gifs) {
   gifBox.innerHTML = `<img class="bubble" src = "${gifs.data.images.original.url}">`;
@@ -133,7 +124,7 @@ function useApiData(gifs) {
     scale: 1.2,
   });
 }
-
+//animation
 anime({
   targets: ".line",
   translateY: [80, 25],
@@ -142,7 +133,6 @@ anime({
   direction: "alternate",
   easing: "linear",
 });
-
 anime({
   targets: ".gifButton",
   skew: "-15",
